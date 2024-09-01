@@ -15,9 +15,9 @@ read -r -p "OUTPUT FILENAME= " OUT
 # Check if output provided
 if [ -z "$OUT" ]; then
     clear
-    sudo masscan -p20-25,80,443,445,3389,8080 --wait 0 "$IP"
+    sudo masscan -p20-25,80,443,445,3389,8080 --wait 1 "$IP"
     exit 1
 fi
 
 clear
-sudo masscan -p20-25,80,443,445,3389,8080 --wait 0 "$IP" -oL "$OUT"
+sudo masscan -p20-25,80,443,445,3389,8080 --wait 1 "$IP" -oL "$OUT"
